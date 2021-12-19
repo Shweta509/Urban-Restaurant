@@ -1,0 +1,387 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: "Reggae One", cursive;
+   font-size: 20px;
+   font-weight: 600;
+   width: 100%;
+   line-height: 1.7em;
+   background: lightskyblue;
+   color: black;
+}
+nav {
+   display: flex;
+   background-color: aliceblue;
+   justify-content: flex-start;
+   align-items: center;
+}
+#label {
+   font-size: 2em;
+   color: black;
+   float: right;
+   display: none;
+}
+#toggle {
+   clear: right;
+   display: none;
+}
+.navigation {
+   list-style: none;
+   display: flex;
+   justify-content: space-around;
+   width: 70vw;
+}
+.links {
+   text-transform: uppercase;
+   font-size: 1.15em;
+   text-decoration: none;
+   color: black;
+}
+.link:hover {
+   background-color: lightskyblue;
+   padding: 10px;
+   border-top-left-radius: 30%;
+   border-bottom-right-radius: 30%;
+}
+.active {
+   color: white;
+   background-color: black;
+   padding: 10px;
+   border-top-right-radius: 30%;
+   border-bottom-left-radius: 30%;
+}
+nav p {
+   align-items: flex-end;
+   /* height: 10vh; */
+}
+main img {
+   width: 90vw;
+   height: 75vh;
+   margin-top: 20px;
+   display: block;
+   margin-right: auto;
+   margin-left: auto;
+}
+.three {
+   display: grid;
+   margin: 50px 20px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-gap: 1em;
+   grid-template-rows: auto;
+}
+.three img,
+iframe {
+   width: 600px;
+   height: 300px;
+   object-fit: cover;
+   display: block;
+   margin-right: auto;
+   margin-left: auto;
+}
+.three img:hover,
+iframe:hover {
+   opacity: 0.8;
+}
+.three > div {
+   border: 2px solid rgb(0, 0, 0);
+   filter: drop-shadow(10px 10px 4px white);
+   color: white;
+   background-color: black;
+}
+.three p {
+   margin: 30px 0;
+   text-align: center;
+}
+.three .msm {
+   color: white;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 1.5em;
+}
+.three .msm:hover {
+   background-color: white;
+   color: black;
+   filter: drop-shadow(4px 10px 4px lightskyblue);
+   padding: 10px;
+   border-top-right-radius: 50%;
+   border-bottom-right-radius: 50%;
+   transition: 2s;
+}
+footer {
+   height: 50vh;
+   width: 100%;
+   margin-top: 3em;
+   text-align: center;
+   background-color: aliceblue;
+   border: 10px ridge rgb(255, 255, 255);
+   /* outline: 5px dashed rgb(0, 0, 0); */
+   outline-offset: 5px;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: auto auto;
+}
+footer > p {
+   margin-top: 40px;
+}
+footer div {
+   margin-top: 20px;
+   color: maroon;
+   grid-column: 1/4;
+}
+@keyframes copyright {
+   0% {
+      top: 0;
+      left: 0;
+   }
+   25% {
+      top: 0;
+      left: 22px;
+   }
+   50% {
+      top: 22px;
+      left: 22px;
+   }
+   75% {
+      top: 22px;
+      left: 0;
+   }
+   100% {
+      top: 0;
+      left: 0;
+   }
+}
+footer .copyright {
+   grid-column: 1/4;
+   font-size: 2em;
+   margin-bottom: 30px;
+   position: relative;
+   animation: copyright 4s linear 0.2s infinite alternate;
+}
+footer .social-link {
+   color: maroon;
+   margin: 0 15px;
+}
+footer .social-link:hover {
+   font-size: 1.5em;
+   transition: 1s;
+   color: skyblue;
+}
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   .links {
+      font-size: 0.8em;
+   }
+   main img {
+      object-fit: cover;
+   }
+   .three img {
+      width: 250px;
+      height: 200px;
+      display: block;
+      object-fit: cover;
+      margin-right: auto;
+      margin-left: auto;
+   }
+   .three iframe {
+      width: 550px;
+      height: 200px;
+   }
+   .three {
+      display: grid;
+      margin: 50px 20px;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+      grid-template-rows: auto auto;
+   }
+   .three .ipad {
+      grid-column: 1/3;
+   }
+   footer {
+      height: 50%;
+   }
+   footer .copyright {
+      font-size: 0.7em;
+   }
+   footer > p {
+      margin-top: 20px;
+      font-size: 0.48em;
+      padding: 0 13px;
+   }
+   footer div {
+      margin-top: 10px;
+      font-size: 15px;
+   }
+   footer .social-link:hover {
+      font-size: 1.3em;
+      transition: 1s;
+      color: skyblue;
+   }
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   nav {
+      display: flex;
+      flex-direction: column;
+   }
+   #label {
+      display: block;
+      position: absolute;
+      top: 4em;
+      right: 40px;
+   }
+   .navigation li {
+      display: none;
+      font-size: 0.8em;
+   }
+   #toggle:checked + .navigation li {
+      display: block;
+      padding: 20px;
+   }
+   .navigation {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+   }
+   .links {
+      font-size: 1em;
+   }
+   .link:hover {
+      padding: 5px;
+   }
+   nav p {
+      text-align: center;
+      margin-bottom: 20px;
+   }
+   main img {
+      height: 55vh;
+      margin-top: 10px;
+      width: 97vw;
+      object-fit: cover;
+   }
+   .three {
+      display: grid;
+      margin: 25px 10px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+   }
+   .three img,
+   iframe {
+      width: 300px;
+      height: 200px;
+   }
+   .three p {
+      margin: 15px 0;
+   }
+   .three .msm {
+      font-size: 1.2em;
+   }
+   footer {
+      display: grid;
+      height: 10%;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+   }
+   footer img {
+      margin: 0 auto;
+   }
+   footer > p {
+      margin-top: 25px;
+      font-size: 0.7em;
+   }
+   footer h2 {
+      margin-bottom: 20px;
+      font-size: 0.8em;
+      margin-top: -20px;
+   }
+   footer div {
+      margin-top: 20px;
+      grid-column: 1/1;
+   }
+   footer .slogan {
+      margin-top: -30px;
+      margin-bottom: 10px;
+      padding: 30px;
+      border-bottom: 5px groove white;
+   }
+   @keyframes copyright {
+      0% {
+         top: 0;
+         left: 0;
+      }
+      25% {
+         top: 0;
+         left: 10px;
+      }
+      50% {
+         top: 30px;
+         left: 10px;
+      }
+      75% {
+         top: 30px;
+         left: 0;
+      }
+      100% {
+         top: 0;
+         left: 0;
+      }
+   }
+   footer .copyright {
+      border-top: 3px groove white;
+      grid-column: 1/1;
+      margin-bottom: 5px;
+      font-size: 0.7em;
+      margin-top: -20px;
+      position: relative;
+      animation: copyright 4s linear 0.2s infinite alternate;
+   }
+   footer .social-link {
+      margin: 0 20px;
+      font-size: 0.9em;
+   }
+   footer .social-link:hover {
+      font-size: 0.6em;
+      transition: 1s;
+      color: skyblue;
+   }
+}
+@media only screen and (min-width: 1025px) {
+   .three img {
+      width: 280px;
+      height: 250px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+   }
+   .three iframe {
+      width: 280px;
+      height: 250px;
+   }
+   .three {
+      display: grid;
+      margin: 40px 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 1em;
+      grid-template-rows: auto;
+   }
+   footer {
+      height: 50%;
+   }
+   footer .copyright {
+      font-size: 1em;
+   }
+   footer > p {
+      margin-top: 20px;
+      font-size: 0.8em;
+   }
+   footer div {
+      margin-top: 10px;
+      font-size: 15px;
+   }
+   footer .social-link:hover {
+      font-size: 1.3em;
+      transition: 1s;
+      color: skyblue;
+   }
+}

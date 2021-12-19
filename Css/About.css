@@ -1,0 +1,470 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: "Reggae One", cursive;
+   font-size: 20px;
+   font-weight: 600;
+   width: 100%;
+   line-height: 1.7em;
+   background: lightskyblue;
+   color: black;
+}
+#label {
+   font-size: 2em;
+   color: black;
+   float: right;
+   display: none;
+}
+#toggle {
+   clear: right;
+   display: none;
+}
+nav {
+   display: flex;
+   background-color: aliceblue;
+   justify-content: flex-start;
+   align-items: center;
+}
+.navigation {
+   list-style: none;
+   display: flex;
+   justify-content: space-around;
+   width: 70vw;
+}
+.links {
+   text-transform: uppercase;
+   font-size: 1.15em;
+   text-decoration: none;
+   color: black;
+}
+.link:hover {
+   background-color: lightskyblue;
+   padding: 10px;
+   border-top-left-radius: 30%;
+   border-bottom-right-radius: 30%;
+}
+.active {
+   color: white;
+   background-color: black;
+   padding: 10px;
+   border-top-right-radius: 30%;
+   border-bottom-left-radius: 30%;
+}
+nav p {
+   align-items: flex-end;
+}
+.form {
+   letter-spacing: 3px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 5em;
+   margin: 20px 50px;
+   grid-template-rows: auto;
+   align-items: stretch;
+}
+.form img {
+   width: 100px;
+   margin-top: 10px;
+   height: 100px;
+}
+.form > div {
+   background-color: aliceblue;
+   font-size: 1.3em;
+   line-height: 2em;
+   text-align: center;
+   border-radius: 200px;
+}
+.form .signup {
+   padding: 20px 0;
+}
+.form h3 {
+   font-size: 1.7em;
+   border-bottom: 7px inset lightskyblue;
+   padding: 20px;
+}
+.form input {
+   margin: 15px;
+   caret-color: lightskyblue;
+}
+.form input[type="text"],
+[type="password"],
+[type="email"],
+[type="date"] {
+   height: 4vh;
+   width: 11vw;
+}
+.form input[type="submit"],
+[type="reset"] {
+   font-size: 1em;
+   padding: 7px;
+   border-top-left-radius: 40%;
+   border-top-right-radius: 40%;
+   background-color: lightskyblue;
+   color: black;
+   font-weight: 700;
+}
+.form button {
+   font-size: 1em;
+   padding: 7px;
+   border-bottom-left-radius: 40%;
+   border-bottom-right-radius: 40%;
+   background-color: lightskyblue;
+   color: black;
+   font-weight: 700;
+}
+main {
+   display: grid;
+   grid-gap: 2em;
+   text-align: center;
+   color: white;
+   margin: 20px 30px;
+   grid-template-columns: 1fr 1fr;
+}
+main img {
+   width: 200px;
+   margin: 20px 0;
+}
+main h2 {
+   text-transform: uppercase;
+   filter: drop-shadow(5px 5px 3px lightskyblue);
+   padding: 10px;
+   border-bottom: 5px solid aliceblue;
+}
+main h4 {
+   color: yellow;
+   filter: drop-shadow(4px 4px 3px red);
+}
+main p {
+   text-transform: capitalize;
+   font-variant: small-caps;
+   line-height: 1.9em;
+}
+main > div {
+   padding: 20px;
+   background-color: black;
+   border: 5px ridge white;
+}
+footer {
+   background-color: rgb(255, 255, 255);
+   height: 9vh;
+   border-top-left-radius: 40%;
+   border-top-right-radius: 40%;
+   transition: 2s;
+   overflow: hidden;
+   text-align: center;
+}
+footer div {
+   display: inline-block;
+   border-right: 5px solid lightskyblue;
+   border-left: 5px solid lightskyblue;
+   margin: 0 20px;
+   padding: 0 20px;
+   color: white;
+   background-color: black;
+}
+footer div h5 {
+   font-size: 1.5em;
+   text-decoration: underline;
+   margin: 10px 0;
+}
+footer div button {
+   padding: 5px;
+   background-color: white;
+   color: black;
+   margin: 10px 0;
+   font-size: 1em;
+}
+footer h2 {
+   padding: 30px;
+   filter: drop-shadow(2px 4px 3px black);
+   color: lightskyblue;
+   font-size: 2em;
+}
+footer:hover {
+   height: 50vh;
+   padding: 40px;
+   transition: 4s;
+}
+footer h6 {
+   margin: 10px 0;
+   font-size: 2em;
+}
+@media only screen and (min-width: 689px) and (max-width: 1024px) {
+   .links {
+      font-size: 0.8em;
+   }
+   .form {
+      letter-spacing: 1px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+      margin: 15px;
+      grid-template-rows: auto;
+      align-items: stretch;
+   }
+   .form img {
+      width: 50px;
+      margin-top: 10px;
+      height: 50px;
+   }
+   .form #login {
+      margin-top: 30px;
+   }
+   .form > div {
+      font-size: 0.7em;
+      line-height: 1.5em;
+      border-radius: 50px;
+   }
+   .form .signup {
+      padding: 20px 0;
+   }
+   .form h3 {
+      font-size: 1.2em;
+      padding: 10px;
+   }
+   .form input {
+      margin: 10px;
+      caret-color: lightskyblue;
+   }
+   .form input[type="text"],
+   [type="password"],
+   [type="email"],
+   [type="date"] {
+      height: 3vh;
+      font-size: 0.6em;
+      padding: 0 5px;
+      background: transparent;
+      width: 15vw;
+   }
+   .form input[type="submit"],
+   [type="reset"] {
+      font-size: 0.8em;
+   }
+   .form button {
+      font-size: 0.8em;
+   }
+   main {
+      grid-gap: 1em;
+   }
+   main img {
+      width: 250px;
+      margin: 20px 0;
+   }
+   main h2 {
+      font-size: 0.7em;
+   }
+   main h4 {
+      font-size: 0.6em;
+   }
+   main p {
+      font-size: 0.7em;
+   }
+   footer {
+      height: 3ch;
+   }
+   footer div {
+      display: block;
+      margin: 0 10px;
+      padding: 0 10px;
+   }
+   footer div h5 {
+      font-size: 1em;
+   }
+   footer div button {
+      margin: 5px 0;
+      font-size: 0.7em;
+   }
+   footer h2 {
+      padding: 20px;
+      font-size: 0.9em;
+   }
+   footer:hover {
+      height: 30ch;
+      padding: 50px;
+      transition: 5s;
+   }
+}
+@media only screen and (min-width: 320px) and (max-width: 688px) {
+   nav {
+      display: flex;
+      flex-direction: column;
+   }
+   #label {
+      display: block;
+      position: absolute;
+      top: 4em;
+      right: 40px;
+   }
+   .navigation li {
+      display: none;
+      font-size: 0.8em;
+   }
+   #toggle:checked + .navigation li {
+      display: block;
+      padding: 20px;
+   }
+   .navigation {
+      display: flex;
+      flex-direction: column;
+      /* height: 10vh; */
+      align-items: center;
+
+      justify-content: space-around;
+   }
+   .links {
+      font-size: 1em;
+   }
+   .link:hover {
+      padding: 5px;
+   }
+   nav p {
+      text-align: center;
+      margin-bottom: 20px;
+   }
+   .form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1em;
+      margin-left: 20px;
+      grid-template-rows: auto auto;
+   }
+   .form img {
+      width: 50px;
+      margin-top: 10px;
+      height: 50px;
+   }
+   .form > div {
+      font-size: 0.7em;
+      padding: 0 20px;
+      border-radius: 30px;
+   }
+   .form .signup {
+      padding: 10px 0;
+   }
+   .form h3 {
+      font-size: 1.2em;
+   }
+   .form input[type="text"],
+   [type="password"],
+   [type="email"],
+   [type="date"] {
+      height: 6vh;
+      width: 30ch;
+      padding: 5px;
+      background: transparent;
+   }
+   .form input[type="submit"],
+   [type="reset"] {
+      font-size: 1em;
+      padding: 7px;
+   }
+   .form button {
+      font-size: 1em;
+      padding: 7px;
+      margin: 20px 0;
+   }
+   main {
+      display: grid;
+      grid-gap: 1em;
+      text-align: center;
+      color: white;
+      margin: 10px 30px 10px 10px;
+      grid-template-columns: 1fr;
+   }
+   main h2 {
+      font-size: 0.8em;
+   }
+   main h4 {
+      font-size: 0.7em;
+   }
+   main p {
+      font-size: 0.6em;
+      padding: 10px;
+   }
+   main img {
+      width: 200px;
+      margin: 20px 0;
+   }
+   footer {
+      height: 3ch;
+      width: 100%;
+   }
+   footer div {
+      display: block;
+      margin: 0 10px;
+      padding: 0 10px;
+   }
+   footer div h5 {
+      font-size: 1em;
+   }
+   footer div button {
+      margin: 5px 0;
+      font-size: 0.4em;
+   }
+   footer p {
+      font-size: 0.6em;
+   }
+   footer h2 {
+      padding: 10px;
+      font-size: 0.55em;
+   }
+   footer:hover {
+      height: 100%;
+      padding: 50px;
+      transition: 5s;
+   }
+   footer .prime {
+      font-size: 0.5em;
+   }
+   footer .primeplus {
+      font-size: 0.5em;
+   }
+   footer h6 {
+      font-size: 0.9em;
+   }
+}
+@media only screen and (min-width: 1025px) {
+   .form > div {
+      background-color: aliceblue;
+      font-size: 1em;
+      border-radius: 100px;
+   }
+   .form .signup {
+      padding: 20px;
+   }
+   .form h3 {
+      font-size: 1em;
+   }
+   .form label {
+      font-size: 0.7em;
+   }
+   .form input[type="text"],
+   [type="password"],
+   [type="email"],
+   [type="date"] {
+      height: 4vh;
+      padding: 5px;
+      background: transparent;
+      width: 20ch;
+   }
+   footer {
+      height: 3ch;
+   }
+   footer div h5 {
+      font-size: 1.3em;
+   }
+   footer h2 {
+      font-size: 1em;
+      padding: 15px;
+   }
+   footer:hover {
+      height: 50%;
+      transition: 5s;
+   }
+   footer h6 {
+      font-size: 1.3em;
+   }
+}

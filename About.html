@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Urban Restaurant</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width , initial-scale=1" />
+      <link rel="stylesheet" href="Css/About.css" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap"
+         rel="stylesheet"
+      />
+   </head>
+   <body>
+      <nav>
+         <a href="About.html"
+            ><img src="Images/logo.png" alt="logo" width="200"
+         /></a>
+         <label id="label" for="toggle">&#9776;</label>
+         <input type="checkbox" id="toggle" />
+         <ul class="navigation">
+            <li><a class="links link" href="index.html">Home</a></li>
+            <li><a class="links link" href="Menu.html">Menu</a></li>
+            <li><a class="links active" href="About.html">About</a></li>
+         </ul>
+         <p>
+            <a class="links" href="tel:+919596979899"
+               >&#128757; For Delivery : +919596979899</a
+            >
+         </p>
+      </nav>
+      <div class="form">
+         <div class="signup">
+            <img src="Images/sign-up-logo.png" alt="sign-up" />
+            <h3>Create New Account</h3>
+            <form action="#" method="POST">
+               <label>First Name :</label>
+               <input
+                  type="text"
+                  name="Fname"
+                  placeholder="Enter Your First Name"
+               /><br />
+               <label>Last Name :</label>
+               <input
+                  type="text"
+                  name="Lname"
+                  placeholder="Enter Your Last Name"
+               /><br />
+               <label>Date Of Birth :</label>
+               <input type="date" name="DOB" /><br />
+               <label>Gender :</label>&nbsp;&nbsp;
+               <label for="male">Male</label>
+               <input type="radio" name="gender" id="male" />
+               <label for="female">Female</label>&nbsp;
+               <input type="radio" name="gender" id="female" /><br />
+               <label>Email :</label>
+               <input
+                  type="email"
+                  name="Email"
+                  placeholder="Enter Your Email"
+               /><br />
+               <label>Password :</label>
+               <input
+                  type="password"
+                  name="Password"
+                  placeholder="Enter Your Password"
+               /><br />
+               <label>Re-Enter Password :</label>
+               <input
+                  type="password"
+                  name="Password"
+                  placeholder="Enter Your Password Again"
+               /><br />
+               <input type="submit" value="Submit" />
+               <input type="reset" value="Reset" />
+            </form>
+         </div>
+         <div class="login">
+            <img src="Images/login.png" alt="log-up" id="login" />
+            <h3>Log-in</h3>
+            <form action="#" method="POST">
+               <label>Email :</label>
+               <input
+                  type="email"
+                  name="Email"
+                  placeholder="Enter Your Email"
+               /><br />
+               <label>Password :</label>
+               <input
+                  type="password"
+                  name="Password"
+                  placeholder="Enter Your Password"
+               /><br />
+               <label for="rem">Remember Me</label><br />
+               <input id="rem" type="checkbox" name="Checkbox" /><br />
+               <button type="button" value="Button">Login</button>
+            </form>
+         </div>
+      </div>
+      <main>
+         <div class="about">
+            <h2>Owner</h2>
+            <img src="Images/owner.jpg" alt="owner" />
+            <h4>- Krishnakumar kunnath ( KK )</h4>
+            <p>
+               we make fresh food for you..GOD gives us ingredients for our
+               daily products but he expect us to do MAKING...! you will found
+               here the best taste of the product and the best quality
+               ever..actually we make special memories for you..
+            </p>
+         </div>
+         <div class="Partner">
+            <h2>Our Partnership With</h2>
+            <img src="Images/partner's.png" alt="partner" />
+         </div>
+      </main>
+      <footer>
+         <h2>Unlock The Premium For Some Amazing Offer's</h2>
+         <div class="prime">
+            <h5>Unlock Prime Membership -</h5>
+            <p>* Get first 5 order for free.*</p>
+            <p>* Get Flat 15% Off on every order. *</p>
+            <p>* Get Flat 20% Off every weekend. *</p>
+            <button id="prime-btn" type="submit">₹799 / Month</button>
+         </div>
+         <div class="primeplus">
+            <h5>Unlock Prime Plus Membership -</h5>
+            <p>* Get first 10 order for free. *</p>
+            <p>* Get Flat 25% Off on every order. *</p>
+            <p>* Get Flat 30% Off every weekend. *</p>
+            <button id="plus-btn" type="submit">₹1399 / Month</button>
+         </div>
+         <h6>Enjoy Every Moment .</h6>
+      </footer>
+      <script src="js/main.js"></script>
+   </body>
+</html>
